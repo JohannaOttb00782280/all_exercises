@@ -1,0 +1,25 @@
+//Position of a moving body
+#include <iostream>
+using namespace std;
+
+// define function 
+float  position(float x0, float v, float a, float t){
+   return x0+v*t+0.5*a*t*t;
+}
+
+int main() {
+  float x0, v,a,n_disp,updates_in_sec,t;
+  cout << "enter the initial position, the speed and the acceleration:" << endl;
+  cin >>x0 >> v >>a; 
+  cout << "how many times you want to display the position of the moving body?"<< endl; 
+  cin>>n_disp; 
+  cout <<"how often (in seconds) you want to update the position of the moving object?"<<endl; 
+  cin >> updates_in_sec; 
+
+  for (int i=0;i<=n_disp-1;i++){
+    t = i*updates_in_sec;
+    cout << "At time " <<t<< " the position is " << position(x0,v,a,t) << endl;
+
+  }
+
+}

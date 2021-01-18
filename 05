@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int fib_func(int n){
+  int a=0,b=1, c, fib;
+    if (n <= 1){fib=n;}
+  else{
+    for (int i=2;i<=n; i++){
+       c=a+b;
+       a=b;
+       b=c;
+    }
+    fib = a+b;}
+  return fib;
+}
+
+int main() {
+  int n ;
+  cout<<"Please give us the n for which you want the fibonaci:" <<endl;
+  cin>> n;
+  cout << "your fibonacci is: "<<fib_func(n);
+
+}

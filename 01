@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// calculate distance
+double dist(double pt_x,double cir_x,double pt_y,double cir_y){
+  return  sqrt((pt_x-cir_x)*(pt_x-cir_x)+(pt_y-cir_y)*(pt_y-cir_y));
+}
+
+int main(){
+  // read in x and y of the point
+  double pt_x,pt_y,cir_x,cir_y,rad;
+  cout << "Enter x and y of the point (with a space in between them): "; // a variable of enum type ”week” 
+  cin >> pt_x >>pt_y;
+  
+  // read in variables for the circle 
+  cout << "\nEnter x, y and the radizs of the circle  (with a space in between them): ";
+  cin >>cir_x >>cir_y >>rad;
+
+  // check if point is in circle 
+  if (dist(pt_x,cir_x,pt_y,cir_y) <= rad){
+    cout << "The point is within circle";
+  }
+  else{cout << "The point is not within the circle";}
+  
+}

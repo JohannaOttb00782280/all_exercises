@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std; 
+
+int counter =0;
+
+int fib_fct (int k){
+  ::counter++;
+  if (k==0||k==1){return k;}
+  else {
+    return fib_fct(k-1)+fib_fct(k-2);}
+  }
+int main() {
+  int n,fib;
+  cout << "for which number do you want a fibonaci number?: ";
+  cin >> n ; 
+  fib = fib_fct(n);
+  cout << "The fibonacci number is: "<< fib << " and the number of calls of fib_fct is " << ::counter; 
+
+}
